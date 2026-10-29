@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#167d55">
+  <meta name="description" content="NutriJoven: información educativa sobre alimentos, recetas económicas y hábitos saludables para estudiantes y familias.">
+  <title>NutriJoven | Come rico, vive mejor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span class="pulse-dot"></span> Pequeños hábitos, grandes cambios <span class="announcement-divider">✦</span> Nutrición para tu día a día</div>
+  <header class="site-header">
+    <a href="#inicio" class="brand" aria-label="NutriJoven, inicio" data-page="inicio">
+      <span class="brand-mark">N<span>+</span></span>
+      <span class="brand-copy"><strong>Nutri<span>Joven</span></strong><small>ALIMENTACIÓN CONSCIENTE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <button class="nav-link active" data-page="inicio">Inicio</button>
+      <button class="nav-link" data-page="alimentos">Alimentos</button>
+      <button class="nav-link" data-page="recetas">Recetas</button>
+      <button class="nav-link" data-page="habitos">Hábitos saludables</button>
+      <button class="nav-link" data-page="consejos">Consejos</button>
+      <button class="nav-link" data-page="acerca">Acerca de</button>
+    </nav>
+    <button class="header-cta" data-page="recetas">Explorar recetas <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="page active" id="page-inicio" data-page-content="inicio">
+      <section class="hero section-wrap">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-icon">✳</span> TU GUÍA DE ALIMENTACIÓN</div>
+          <h1>Come rico.<br><span>Siéntete bien.</span><br>Vive mejor.</h1>
+          <p>Ideas sencillas para comer variado, descubrir nuevos alimentos y preparar recetas deliciosas sin gastar de más.</p>
+          <div class="hero-actions"><button class="btn btn-primary" data-page="recetas">Encuentra tu próxima receta <span>→</span></button><button class="text-link" data-page="alimentos">Conoce los alimentos <span>↗</span></button></div>
+          <div class="hero-proof"><div class="avatar-stack"><span>🍎</span><span>🥑</span><span>🥕</span></div><div><strong>Aprende a tu ritmo</strong><small>Información clara para todos los días</small></div></div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-image-main"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=85" alt="Plato colorido con alimentos variados"></div>
+          <div class="floating-note note-top"><span class="note-icon">🌿</span><span><strong>Más variedad</strong><small>Un plato lleno de color</small></span></div>
+          <div class="floating-note note-bottom"><span class="note-icon blue">💧</span><span><strong>Recuerda hidratarte</strong><small>Ten agua a la mano</small></span></div>
+          <div class="hero-sparkle">✳</div>
+        </div>
+      </section>
+      <section class="section-wrap quick-section">
+        <div class="section-heading"><div><div class="eyebrow">EMPIEZA POR AQUÍ</div><h2>¿Qué quieres descubrir?</h2></div><p>Explora ideas prácticas para sumar bienestar a tu rutina.</p></div>
+        <div class="quick-grid">
+          <button class="quick-card green-card" data-page="alimentos"><span class="quick-icon">🥦</span><span class="quick-title">Conoce los alimentos</span><span class="quick-desc">Descubre sus características y cómo incluirlos.</span><span class="card-arrow">↗</span></button>
+          <button class="quick-card yellow-card" data-page="recetas"><span class="quick-icon">🍲</span><span class="quick-title">Prepara algo rico</span><span class="quick-desc">Recetas sencillas con ingredientes cotidianos.</span><span class="card-arrow">↗</span></button>
+          <button class="quick-card blue-card" data-page="habitos"><span class="quick-icon">💧</span><span class="quick-title">Crea buenos hábitos</span><span class="quick-desc">Pequeños pasos que puedes practicar cada día.</span><span class="card-arrow">↗</span></button>
+        </div>
+      </section>
+      <section class="feature-band">
+        <div class="section-wrap feature-inner"><div><div class="eyebrow light-eyebrow">BUENO, FÁCIL Y CERCANO</div><h2>Alimentarse mejor<br>no tiene que ser complicado.</h2><p>Empieza con lo que tienes en casa. La variedad, la planificación y las preparaciones sencillas pueden hacer la diferencia.</p><button class="btn btn-light" data-page="consejos">Ver consejos prácticos <span>→</span></button></div><div class="feature-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Comida casera variada en un recipiente"></div></div>
+      </section>
+      <section class="section-wrap popular-section">
+        <div class="section-heading"><div><div class="eyebrow">PARA INSPIRARTE</div><h2>Ideas que puedes probar</h2></div><button class="text-link" data-page="recetas">Ver todas las recetas <span>→</span></button></div>
+        <div class="recipe-grid" id="homeRecipeGrid"></div>
+      </section>
+      <section class="section-wrap sources-strip"><span class="source-icon">✓</span><div><strong>Aprende con información responsable</strong><p>Este sitio es educativo y no reemplaza la orientación de profesionales de salud.</p></div><button class="text-link" data-page="acerca">Conoce nuestras fuentes <span>↗</span></button></section>
+    </section>
+
+    <section class="page" id="page-alimentos" data-page-content="alimentos">
+      <section class="page-hero section-wrap compact-hero"><div class="eyebrow">CONOCE LO QUE COMES</div><h1>Un mundo de alimentos<span>.</span></h1><p>Conoce grupos de alimentos, sus características y formas sencillas de disfrutarlos en tu día a día.</p><div class="search-wrap"><span>⌕</span><input id="foodSearch" type="search" placeholder="Buscar un alimento..." aria-label="Buscar alimento"><button id="clearFoodSearch" aria-label="Limpiar búsqueda">✕</button></div></section>
+      <section class="section-wrap content-section"><div class="filter-row" id="foodFilters"><button class="filter-chip active" data-filter="Todos">Todos</button><button class="filter-chip" data-filter="Frutas">Frutas</button><button class="filter-chip" data-filter="Verduras">Verduras</button><button class="filter-chip" data-filter="Cereales">Cereales</button><button class="filter-chip" data-filter="Legumbres">Legumbres</button><button class="filter-chip" data-filter="Otros">Otros</button></div><div class="food-grid" id="foodGrid"></div><div class="empty-state hidden" id="foodEmpty">No encontramos alimentos con esa búsqueda. Prueba con otra palabra.</div></section>
+    </section>
+
+    <section class="page" id="page-recetas" data-page-content="recetas">
+      <section class="page-hero section-wrap compact-hero"><div class="eyebrow">ALGO DELICIOSO TE ESPERA</div><h1>Recetas fáciles, <span>ideas infinitas.</span></h1><p>Preparaciones sencillas para inspirarte con ingredientes cotidianos. Ajusta las cantidades según tus necesidades.</p><div class="search-wrap"><span>⌕</span><input id="recipeSearch" type="search" placeholder="Busca por receta o ingrediente..." aria-label="Buscar receta"><button id="clearRecipeSearch" aria-label="Limpiar búsqueda">✕</button></div></section>
+      <section class="section-wrap content-section"><div class="filter-row" id="recipeFilters"><button class="filter-chip active" data-filter="Todas">Todas</button><button class="filter-chip" data-filter="Desayunos">Desayunos</button><button class="filter-chip" data-filter="Almuerzos">Almuerzos</button><button class="filter-chip" data-filter="Meriendas">Meriendas</button><button class="filter-chip" data-filter="Bebidas">Bebidas</button><button class="filter-chip" data-filter="Favoritas">♥ Favoritas</button></div><div class="recipe-grid recipe-grid-large" id="recipeGrid"></div><div class="empty-state hidden" id="recipeEmpty">No encontramos recetas. Intenta con otro ingrediente o categoría.</div></section>
+    </section>
+
+    <section class="page" id="page-habitos" data-page-content="habitos">
+      <section class="page-hero section-wrap compact-hero"><div class="eyebrow">PASO A PASO</div><h1>Hábitos saludables<span>, sin complicarte.</span></h1><p>No se trata de hacerlo todo perfecto. Empieza por pequeñas acciones realistas y descubre cuáles funcionan para ti.</p></section>
+      <section class="section-wrap habit-layout"><div class="habit-intro"><div class="habit-photo"><img src="https://images.unsplash.com/photo-1505576399274-565b52d4ac71?auto=format&fit=crop&w=1000&q=85" alt="Frutas frescas y alimentos variados"></div><div class="habit-caption"><span>🌱</span><div><strong>Un paso a la vez</strong><small>Los hábitos se construyen con práctica.</small></div></div></div><div class="habit-list"><article class="habit-item"><span class="habit-number">01</span><div><h3>Busca variedad</h3><p>Cuando sea posible, combina distintos grupos de alimentos y colores a lo largo del día.</p></div><span class="habit-emoji">🥗</span></article><article class="habit-item"><span class="habit-number">02</span><div><h3>Ten agua disponible</h3><p>Llevar una botella reutilizable puede ayudarte a recordar que debes hidratarte.</p></div><span class="habit-emoji">💧</span></article><article class="habit-item"><span class="habit-number">03</span><div><h3>Planea con lo que tienes</h3><p>Revisa los alimentos disponibles en casa antes de comprar y busca recetas que los aprovechen.</p></div><span class="habit-emoji">📝</span></article><article class="habit-item"><span class="habit-number">04</span><div><h3>Disfruta tus comidas</h3><p>Busca un momento tranquilo para comer y presta atención a tus preferencias y sensaciones.</p></div><span class="habit-emoji">☀️</span></article><article class="habit-item"><span class="habit-number">05</span><div><h3>Aprende a tu ritmo</h3><p>Haz cambios que sean realistas para tu contexto, cultura, presupuesto y necesidades.</p></div><span class="habit-emoji">🌼</span></article></div></section>
+      <section class="section-wrap note-panel"><span>💚</span><p><strong>Recuerda:</strong> cada persona tiene necesidades distintas. Estos consejos son generales y no sustituyen una recomendación profesional individual.</p></section>
+    </section>
+
+    <section class="page" id="page-consejos" data-page-content="consejos">
+      <section class="page-hero section-wrap compact-hero"><div class="eyebrow">IDEAS PARA TU RUTINA</div><h1>Consejos que sí <span>puedes aplicar.</span></h1><p>Ideas simples para organizar las comidas, aprovechar ingredientes y aprender sobre alimentación con criterio.</p></section>
+      <section class="section-wrap tips-grid"><article class="tip-card tip-feature"><div class="tip-art">🧺</div><span class="tip-label">PLANIFICACIÓN</span><h2>Organiza antes de comprar</h2><p>Haz una lista de lo que ya tienes, planea algunas comidas y elige ingredientes que puedas utilizar de varias maneras.</p><button class="text-link" data-page="recetas">Buscar recetas <span>→</span></button></article><article class="tip-card"><div class="tip-art small-art">🥫</div><span class="tip-label">APROVECHAMIENTO</span><h3>Usa lo que hay en casa</h3><p>Arroz, legumbres, huevos o verduras pueden servir como base para distintas preparaciones.</p></article><article class="tip-card"><div class="tip-art small-art">🏷️</div><span class="tip-label">INFORMACIÓN</span><h3>Lee las etiquetas</h3><p>Revisa ingredientes, fecha de vencimiento y condiciones de conservación de los productos.</p></article><article class="tip-card"><div class="tip-art small-art">🍽️</div><span class="tip-label">VARIEDAD</span><h3>Prueba nuevas combinaciones</h3><p>Combina sabores, texturas y alimentos conocidos para descubrir preparaciones que disfrutes.</p></article><article class="tip-card"><div class="tip-art small-art">👨‍👩‍👧</div><span class="tip-label">EN COMUNIDAD</span><h3>Comparte ideas</h3><p>Conversar en familia o con compañeros puede ayudar a intercambiar recetas y formas de aprovechar alimentos.</p></article></section>
+      <section class="section-wrap external-sources"><div><div class="eyebrow">SIGUE APRENDIENDO</div><h2>Consulta fuentes confiables</h2><p>Para ampliar la información, visita organizaciones oficiales. Los enlaces se abren en una nueva pestaña.</p></div><div class="source-links"><a href="https://www.minsalud.gov.co/" target="_blank" rel="noopener noreferrer"><span class="source-logo">CO</span><span><strong>Ministerio de Salud de Colombia</strong><small>Información oficial en salud</small></span><b>↗</b></a><a href="https://www.who.int/es" target="_blank" rel="noopener noreferrer"><span class="source-logo blue-logo">OMS</span><span><strong>Organización Mundial de la Salud</strong><small>Orientación general en salud</small></span><b>↗</b></a></div></section>
+    </section>
+
+    <section class="page" id="page-acerca" data-page-content="acerca">
+      <section class="page-hero section-wrap compact-hero"><div class="eyebrow">CONOCE NUTRIJOVEN</div><h1>Información para elegir <span>con confianza.</span></h1><p>Un proyecto educativo pensado para acercar información clara sobre alimentos, recetas y hábitos cotidianos.</p></section>
+      <section class="section-wrap about-grid"><div class="about-main"><span class="about-symbol">N<span>+</span></span><h2>Aprender también alimenta.</h2><p>NutriJoven nace como una propuesta para que estudiantes, familias y docentes encuentren ideas sencillas para explorar la alimentación saludable sin gastar demasiado.</p><p>Queremos que la información sea fácil de consultar, útil para la vida cotidiana y respetuosa con las distintas realidades de cada persona.</p><div class="about-values"><span>🌿 Información educativa</span><span>🥕 Ideas económicas</span><span>🔎 Fuentes confiables</span></div></div><div class="about-side"><div class="about-stat"><strong>01</strong><span>Aprender sobre alimentos</span></div><div class="about-stat"><strong>02</strong><span>Explorar recetas sencillas</span></div><div class="about-stat"><strong>03</strong><span>Construir hábitos posibles</span></div><div class="disclaimer"><strong>Importante</strong><p>NutriJoven no realiza diagnósticos, no prescribe dietas personalizadas y no reemplaza la atención de profesionales de salud.</p></div></div></section>
+      <section class="section-wrap external-sources"><div><div class="eyebrow">FUENTES DE CONSULTA</div><h2>Información responsable</h2><p>Consulta información general en sitios institucionales y verifica que el contenido corresponda a tus dudas.</p></div><div class="source-links"><a href="https://www.minsalud.gov.co/" target="_blank" rel="noopener noreferrer"><span class="source-logo">CO</span><span><strong>Ministerio de Salud de Colombia</strong><small>Portal oficial</small></span><b>↗</b></a><a href="https://www.who.int/es" target="_blank" rel="noopener noreferrer"><span class="source-logo blue-logo">OMS</span><span><strong>Organización Mundial de la Salud</strong><small>Portal oficial</small></span><b>↗</b></a></div></section>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main section-wrap"><a href="#inicio" class="brand footer-brand" data-page="inicio"><span class="brand-mark">N<span>+</span></span><span class="brand-copy"><strong>Nutri<span>Joven</span></strong><small>ALIMENTACIÓN CONSCIENTE</small></span></a><p>Ideas sencillas para aprender, cocinar y disfrutar de una alimentación variada.</p><div class="footer-nav"><button data-page="inicio">Inicio</button><button data-page="alimentos">Alimentos</button><button data-page="recetas">Recetas</button><button data-page="habitos">Hábitos saludables</button><button data-page="acerca">Acerca de</button></div></div><div class="footer-bottom section-wrap"><span>© <span id="year"></span> NutriJoven · Proyecto educativo</span><span>Hecho para aprender con bienestar <b>♥</b></span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop hidden" id="recipeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="recipe-modal"><button class="modal-close" id="modalClose" aria-label="Cerrar">×</button><div id="modalContent"></div></div></div>
+  <button class="back-top" id="backTop" aria-label="Volver arriba">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
