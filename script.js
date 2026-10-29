@@ -252,7 +252,36 @@ function goToPage(name) {
       page.dataset.pageContent === name
     );
   });
+/* NUTRIJOVEN: CAMBIO ENTRE PANTALLAS */
+document.addEventListener("click", function (e) {
+  const boton = e.target.closest("[data-page]");
+  if (!boton) return;
 
+  const destino = boton.getAttribute("data-page");
+  const pantalla = document.querySelector(
+    `[data-page-content="${destino}"]`
+  );
+
+  if (!pantalla) return;
+
+  e.preventDefault();
+  e.stopPropagation();
+
+  document.querySelectorAll(".page").forEach(function (pagina) {
+    pagina.classList.remove("active");
+  });
+
+  pantalla.classList.add("active");
+
+  document.querySelectorAll(".nav-link[data-page]").forEach(function (enlace) {
+    enlace.classList.toggle(
+      "active",
+      enlace.getAttribute("data-page") === destino
+    );
+  });
+
+  window.scrollTo({ top: 0, behavior: "auto" });
+}, true);
   $$(".nav-link").forEach(button => {
     button.classList.toggle(
       "active",
